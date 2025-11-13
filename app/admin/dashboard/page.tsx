@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react"
 import { useRouter } from "next/navigation"
+import Image from "next/image"
 import Link from "next/link"
 import AdminSidebar from "@/components/admin-sidebar"
 import { LogOut, Users, UserPlus } from "lucide-react"
@@ -34,14 +35,24 @@ export default function AdminDashboard() {
       {/* Header */}
       <header className="bg-[#1A2B23] text-white p-4 shadow-lg fixed top-0 left-0 right-0 z-10">
         <div className="flex items-center justify-between pl-4 pr-4">
-          <h1 className="text-2xl font-bold">Painel Administrativo - Pet Moleque</h1>
+          <div className="flex items-center gap-3">
+            <Image
+              src="/Logotipo.png"
+              alt="Pet Moleque"
+              width={40}
+              height={40}
+              className="object-contain"
+            />
+            <h1 className="text-xl lg:text-2xl font-bold hidden sm:block">Painel Administrativo - Pet Moleque</h1>
+            <h1 className="text-xl font-bold sm:hidden">Admin</h1>
+          </div>
           <Button
             onClick={handleLogout}
             variant="ghost"
             className="text-white hover:bg-white/10"
           >
-            <LogOut className="w-5 h-5 mr-2" />
-            Sair
+            <LogOut className="w-5 h-5" />
+            <span className="ml-2 hidden sm:inline">Sair</span>
           </Button>
         </div>
       </header>
@@ -50,11 +61,11 @@ export default function AdminDashboard() {
         <AdminSidebar />
 
         {/* Main Content */}
-        <main className="ml-64 flex-1 p-6 lg:p-8">
-          <div className="bg-white rounded-xl shadow-md p-8">
-            <h2 className="text-3xl font-bold text-[#1A2B23] mb-4">Bem-vinda, Camila!</h2>
+        <main className="lg:ml-64 flex-1 p-4 lg:p-8">
+          <div className="bg-white rounded-xl shadow-md p-6 lg:p-8">
+            <h2 className="text-2xl lg:text-3xl font-bold text-[#1A2B23] mb-4">Bem-vinda, Camila!</h2>
             <p className="text-gray-700 mb-6">
-              Use o menu ao lado para cadastrar novos clientes ou visualizar a lista de pets cadastrados.
+              Use o menu para cadastrar novos clientes ou visualizar a lista de pets cadastrados.
             </p>
             <div className="grid md:grid-cols-2 gap-6">
               <Link

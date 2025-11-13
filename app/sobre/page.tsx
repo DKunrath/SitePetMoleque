@@ -1,6 +1,7 @@
 import Navbar from "@/components/navbar"
 import Footer from "@/components/footer"
 import WhatsAppButton from "@/components/whatsapp-button"
+import Image from "next/image"
 
 export default function About() {
   return (
@@ -14,9 +15,15 @@ export default function About() {
 
           {/* Apresentação da Camila */}
           <div className="bg-white p-8 rounded-xl shadow-lg mb-8">
-            <div className="flex flex-col md:flex-row gap-8 items-center">
-              <div className="w-48 h-48 bg-[#1A2B23] rounded-full flex items-center justify-center text-white text-6xl flex-shrink-0">
-                👩‍⚕️
+            <div className="flex flex-col md:flex-row gap-8 items-start">
+              <div className="w-64 h-96 rounded-xl overflow-hidden flex-shrink-0">
+                <Image
+                  src="/image_sobre_camila.JPG"
+                  alt="Camila - Técnica Veterinária"
+                  width={256}
+                  height={384}
+                  className="object-cover w-full h-full"
+                />
               </div>
               <div className="flex-1">
                 <h2 className="text-3xl font-bold text-[#1A2B23] mb-4">Camila</h2>
@@ -40,77 +47,82 @@ export default function About() {
               Família Pet Moleque
             </h2>
             
-            <div className="flex justify-center mb-6">
-              <div className="grid grid-cols-3 gap-4">
-                <div className="text-center">
-                  <div className="w-24 h-24 bg-[#1A2B23] rounded-full flex items-center justify-center text-4xl mb-2">
-                    😻
-                  </div>
-                  <p className="font-semibold text-[#1A2B23]">Bartolomeu</p>
-                </div>
-                <div className="text-center">
-                  <div className="w-24 h-24 bg-[#1A2B23] rounded-full flex items-center justify-center text-4xl mb-2">
-                    🐶
-                  </div>
-                  <p className="font-semibold text-[#1A2B23]">Bartolino</p>
-                </div>
-                <div className="text-center">
-                  <div className="w-24 h-24 bg-[#1A2B23] rounded-full flex items-center justify-center text-4xl mb-2">
-                    👨
-                  </div>
-                  <p className="font-semibold text-[#1A2B23]">Erick</p>
-                </div>
+            <div className="flex flex-col md:flex-row gap-8 items-start">
+              <div className="w-64 h-96 rounded-xl overflow-hidden flex-shrink-0">
+                <Image
+                  src="/familia_pet_moleque.JPG"
+                  alt="Família Pet Moleque"
+                  width={256}
+                  height={384}
+                  className="object-cover w-full h-full"
+                />
               </div>
-            </div>
 
-            <div className="text-gray-700 space-y-4">
-              <p className="leading-relaxed">
-                No meu lar reside meu marido Erick, nossos pets Bartolomeu e Bartolino 😻🐶 e eu. Sabemos o quanto a rotina é importante na vida dos animais, por isso mantemos a nossa super organizada, mas, claro, sempre observando e adaptando, quando necessário. Tivemos o cuidado de estruturá-la de forma que o dia a dia deles acompanhe naturalmente o nosso.
-              </p>
-              <p className="leading-relaxed">
-                E você deve estar se perguntando: como fazemos quando estou em plantões longos, por vários dias consecutivos?
-              </p>
-              <p className="leading-relaxed font-semibold">
-                A resposta é simples: meu marido, com seu horário fixo de trabalho, consegue sempre manter os cuidados e o ritmo dos nossos pets, preservando a tranquilidade e o amor que valorizamos no nosso lar, mesmo durante as minhas ausências temporárias.
-              </p>
-              <p className="leading-relaxed text-lg text-[#1A2B23] font-bold">
-                Por isso digo: é uma troca verdadeira, de família para família. Enquanto eu cuido do seu pet, o Erick cuida dos nossos — e é isso que torna o meu trabalho tão especial.
-              </p>
+              <div className="text-gray-700 space-y-4 flex-1">
+                <p className="leading-relaxed">
+                  No meu lar reside meu marido Erick, nossos pets Bartolomeu e Bartolino 😻🐶 e eu. Sabemos o quanto a rotina é importante na vida dos animais, por isso mantemos a nossa super organizada, mas, claro, sempre observando e adaptando, quando necessário. Tivemos o cuidado de estruturá-la de forma que o dia a dia deles acompanhe naturalmente o nosso.
+                </p>
+                <p className="leading-relaxed">
+                  E você deve estar se perguntando: como fazemos quando estou em plantões longos, por vários dias consecutivos?
+                </p>
+                <p className="leading-relaxed font-semibold">
+                  A resposta é simples: meu marido, com seu horário fixo de trabalho, consegue sempre manter os cuidados e o ritmo dos nossos pets, preservando a tranquilidade e o amor que valorizamos no nosso lar, mesmo durante as minhas ausências temporárias.
+                </p>
+                <p className="leading-relaxed text-lg text-[#1A2B23] font-bold">
+                  Por isso digo: é uma troca verdadeira, de família para família. Enquanto eu cuido do seu pet, o Erick cuida dos nossos. E é isso que torna o meu trabalho tão especial.
+                </p>
+              </div>
             </div>
           </div>
 
           {/* Nossos Valores */}
           <div className="bg-white p-8 rounded-xl shadow-lg">
-            <h2 className="text-3xl font-bold text-[#1A2B23] mb-6 text-center">
+            <h2 className="text-3xl font-bold text-[#1A2B23] mb-8 text-center">
               Nossos Valores
             </h2>
-            <div className="grid md:grid-cols-2 gap-6">
-              <div className="flex gap-4">
-                <div className="text-3xl">❤️</div>
-                <div>
-                  <h3 className="font-bold text-[#1A2B23] mb-2">Amor pelos Animais</h3>
-                  <p className="text-gray-700">Cada pet é tratado com carinho genuíno e respeito</p>
+            <div className="grid md:grid-cols-2 gap-8">
+              <div className="bg-gradient-to-br from-[#E6E0D2] to-[#F5F1E8] p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow">
+                <div className="flex items-start gap-4">
+                  <div className="text-4xl bg-white rounded-full w-16 h-16 flex items-center justify-center flex-shrink-0 shadow-sm">
+                    ❤️
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-xl text-[#1A2B23] mb-2">Amor pelos Animais</h3>
+                    <p className="text-gray-700 leading-relaxed">Cada pet é tratado com carinho genuíno e respeito</p>
+                  </div>
                 </div>
               </div>
-              <div className="flex gap-4">
-                <div className="text-3xl">⚕️</div>
-                <div>
-                  <h3 className="font-bold text-[#1A2B23] mb-2">Profissionalismo</h3>
-                  <p className="text-gray-700">Formação técnica e experiência em cuidados veterinários</p>
+              <div className="bg-gradient-to-br from-[#E6E0D2] to-[#F5F1E8] p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow">
+                <div className="flex items-start gap-4">
+                  <div className="text-4xl bg-white rounded-full w-16 h-16 flex items-center justify-center flex-shrink-0 shadow-sm">
+                    ⚕️
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-xl text-[#1A2B23] mb-2">Profissionalismo</h3>
+                    <p className="text-gray-700 leading-relaxed">Formação técnica e experiência em cuidados veterinários</p>
+                  </div>
                 </div>
               </div>
-              <div className="flex gap-4">
-                <div className="text-3xl">🏡</div>
-                <div>
-                  <h3 className="font-bold text-[#1A2B23] mb-2">Conforto do Lar</h3>
-                  <p className="text-gray-700">Atendimento no ambiente familiar do pet</p>
+              <div className="bg-gradient-to-br from-[#E6E0D2] to-[#F5F1E8] p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow">
+                <div className="flex items-start gap-4">
+                  <div className="text-4xl bg-white rounded-full w-16 h-16 flex items-center justify-center flex-shrink-0 shadow-sm">
+                    🏡
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-xl text-[#1A2B23] mb-2">Conforto do Lar</h3>
+                    <p className="text-gray-700 leading-relaxed">Atendimento no ambiente familiar do pet</p>
+                  </div>
                 </div>
               </div>
-              <div className="flex gap-4">
-                <div className="text-3xl">🤝</div>
-                <div>
-                  <h3 className="font-bold text-[#1A2B23] mb-2">Confiança</h3>
-                  <p className="text-gray-700">Responsabilidade e dedicação em cada atendimento</p>
+              <div className="bg-gradient-to-br from-[#E6E0D2] to-[#F5F1E8] p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow">
+                <div className="flex items-start gap-4">
+                  <div className="text-4xl bg-white rounded-full w-16 h-16 flex items-center justify-center flex-shrink-0 shadow-sm">
+                    🤝
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-xl text-[#1A2B23] mb-2">Confiança</h3>
+                    <p className="text-gray-700 leading-relaxed">Responsabilidade e dedicação em cada atendimento</p>
+                  </div>
                 </div>
               </div>
             </div>

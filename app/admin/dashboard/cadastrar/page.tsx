@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react"
 import { useRouter } from "next/navigation"
+import Image from "next/image"
 import Link from "next/link"
 import { getSupabaseClient } from "@/lib/supabase"
 import AdminSidebar from "@/components/admin-sidebar"
@@ -181,14 +182,23 @@ export default function CadastrarCliente() {
             <ArrowLeft className="w-5 h-5" />
             Voltar ao Dashboard
           </Link>
-          <h1 className="text-2xl font-bold">Cadastrar Cliente</h1>
+          <div className="flex items-center gap-3">
+            <Image
+              src="/Logotipo.png"
+              alt="Pet Moleque"
+              width={32}
+              height={32}
+              className="object-contain"
+            />
+            <h1 className="text-2xl font-bold">Cadastrar Cliente</h1>
+          </div>
           <div className="w-32"></div>
         </div>
       </header>
 
       <AdminSidebar />
 
-      <main className="ml-64 max-w-5xl p-6 lg:p-8">
+      <main className="lg:ml-64 max-w-5xl p-4 lg:p-8">
         <div className="bg-white rounded-xl shadow-md p-8">
           <form onSubmit={handleSubmit} className="space-y-6">
             {/* Upload de Foto */}

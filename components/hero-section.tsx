@@ -4,7 +4,7 @@ import Link from "next/link"
 
 export default function HeroSection() {
   const whatsappUrl =
-    "https://wa.me/5511999999999?text=Olá!%20Gostaria%20de%20agendar%20um%20atendimento%20com%20a%20Pet%20Moleque."
+    "https://wa.me/5551999589178?text=Olá!%20Gostaria%20de%20agendar%20um%20atendimento%20com%20a%20Pet%20Moleque."
 
   return (
     <div className="pt-20 min-h-screen bg-gradient-to-b from-background to-secondary/20">
@@ -13,7 +13,7 @@ export default function HeroSection() {
           {/* Text Content */}
           <div className="space-y-6">
             <h1 className="text-4xl md:text-5xl font-bold text-primary leading-tight text-pretty">
-              Cada pet tem sua própria história
+              Cuidados especializados e personalizados para cada fase da vida do seu pet
             </h1>
             <p className="text-lg text-foreground/80 leading-relaxed text-pretty">
               Cada pet tem sua própria história, seu ritmo e seu jeitinho de demonstrar amor. Por isso, o cuidado que
@@ -40,8 +40,8 @@ export default function HeroSection() {
           {/* Image Placeholder */}
           <div className="flex justify-center">
             <img
-              src="/professional-veterinarian-with-dog.jpg"
-              alt="Camila - Técnica Veterinária"
+              src="/image_hero_section.JPG"
+              alt="Bartolomeu e Bartolino"
               className="w-full max-w-md rounded-2xl shadow-lg object-cover"
             />
           </div>

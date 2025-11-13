@@ -3,6 +3,7 @@
 import Navbar from "@/components/navbar"
 import Footer from "@/components/footer"
 import WhatsAppButton from "@/components/whatsapp-button"
+import Image from "next/image"
 import Link from "next/link"
 import { Heart, Footprints, Clock } from "lucide-react"
 
@@ -11,6 +12,7 @@ const servicesDetail = [
     id: 1,
     title: "DOG WALKER",
     icon: Footprints,
+    image: "/galery_image_4.png",
     fullDescription: "Passeios profissionais que combinam segurança, diversão e estimulação para seu cão.",
     features: [
       "Passeios com duração flexível",
@@ -26,6 +28,7 @@ const servicesDetail = [
     id: 2,
     title: "PET SITTER (Visita Rápida)",
     icon: Heart,
+    image: "/galery_image_7.png",
     fullDescription: "Cuidados rápidos na casa do seu pet com atenção, carinho e profissionalismo.",
     features: [
       "Cuidados na casa do tutor",
@@ -39,8 +42,9 @@ const servicesDetail = [
   },
   {
     id: 3,
-    title: "PET COMPANION (Acompanhamento Estendido)",
+    title: "HOME CARE (Acompanhamento Estendido)",
     icon: Clock,
+    image: "/galery_image_1.png",
     fullDescription:
       "Companhia e supervisão estendida para garantir o bem-estar do seu pet durante períodos mais longos.",
     features: [
@@ -57,58 +61,73 @@ const servicesDetail = [
 
 export default function Services() {
   const whatsappUrl =
-    "https://wa.me/5511999999999?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20os%20serviços%20da%20Pet%20Moleque."
+    "https://wa.me/5551999589178?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20os%20serviços%20da%20Pet%20Moleque."
 
   return (
     <main>
       <Navbar />
-      <div className="pt-20 min-h-screen bg-background">
+      <div className="pt-20 min-h-screen bg-[#E6E0D2]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-          <h1 className="text-4xl font-bold text-primary mb-4">Serviços Detalhados</h1>
-          <p className="text-xl text-foreground/70 mb-16">
-            Conheça todos os serviços que oferecemos para cuidar do seu pet
-          </p>
+          <div className="text-center mb-16">
+            <h1 className="text-5xl font-bold text-[#1A2B23] mb-4">Nossos Serviços</h1>
+            <p className="text-xl text-gray-700">
+              Conheça em detalhes todos os serviços que oferecemos para cuidar do seu pet
+            </p>
+          </div>
 
-          <div className="space-y-12">
-            {servicesDetail.map((service) => {
+          <div className="space-y-16">
+            {servicesDetail.map((service, index) => {
               const Icon = service.icon
+              const isEven = index % 2 === 0
+              const serviceWhatsappUrl = `https://wa.me/5551999589178?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20o%20serviço%20de%20${encodeURIComponent(service.title)}%20da%20Pet%20Moleque.`
+              
               return (
-                <div key={service.id} className="bg-card rounded-xl shadow-md p-8 border border-secondary/30">
-                  <div className="flex items-start gap-6">
-                    <div className="flex items-center justify-center w-16 h-16 bg-primary/10 rounded-lg flex-shrink-0">
-                      <Icon className="w-8 h-8 text-primary" />
+                <div key={service.id} className="bg-white rounded-2xl shadow-xl overflow-hidden">
+                  <div className={`grid md:grid-cols-2 gap-0 ${isEven ? '' : 'md:grid-flow-dense'}`}>
+                    {/* Image Section */}
+                    <div className={`relative h-80 md:h-auto ${isEven ? '' : 'md:col-start-2'}`}>
+                      <Image
+                        src={service.image}
+                        alt={service.title}
+                        fill
+                        className="object-cover"
+                      />
+                      <div className="absolute top-6 left-6 flex items-center justify-center w-16 h-16 bg-[#1A2B23] rounded-xl shadow-lg">
+                        <Icon className="w-8 h-8 text-[#E6E0D2]" />
+                      </div>
                     </div>
-                    <div className="flex-1">
-                      <h2 className="text-3xl font-bold text-primary mb-2">{service.title}</h2>
-                      <p className="text-lg text-foreground/70 mb-6">{service.fullDescription}</p>
 
-                      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
-                        <div>
-                          <h3 className="font-semibold text-primary mb-3">Inclui:</h3>
-                          <ul className="space-y-2">
-                            {service.features.map((feature, index) => (
-                              <li key={index} className="flex items-start gap-3">
-                                <span className="text-primary mt-1">✓</span>
-                                <span className="text-foreground/80">{feature}</span>
-                              </li>
-                            ))}
-                          </ul>
-                        </div>
-                        <div>
-                          <h3 className="font-semibold text-primary mb-3">Ideal para:</h3>
-                          <div className="bg-secondary/20 p-4 rounded-lg">
-                            <p className="text-foreground/80 text-pretty">{service.ideal}</p>
-                          </div>
-                        </div>
+                    {/* Content Section */}
+                    <div className="p-8 md:p-12 flex flex-col justify-center">
+                      <h2 className="text-3xl md:text-4xl font-bold text-[#1A2B23] mb-4">{service.title}</h2>
+                      <p className="text-lg text-gray-700 mb-8 leading-relaxed">{service.fullDescription}</p>
+
+                      <div className="mb-8">
+                        <h3 className="font-bold text-xl text-[#1A2B23] mb-4 flex items-center gap-2">
+                          <span className="text-2xl">✓</span> O que está incluso:
+                        </h3>
+                        <ul className="space-y-3">
+                          {service.features.map((feature, idx) => (
+                            <li key={idx} className="flex items-start gap-3">
+                              <span className="text-[#1A2B23] mt-1 font-bold text-lg">•</span>
+                              <span className="text-gray-700">{feature}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+
+                      <div className="bg-gradient-to-br from-[#E6E0D2] to-[#F5F1E8] p-6 rounded-xl mb-8">
+                        <h3 className="font-bold text-lg text-[#1A2B23] mb-2">💡 Ideal para:</h3>
+                        <p className="text-gray-700 leading-relaxed">{service.ideal}</p>
                       </div>
 
                       <Link
-                        href={whatsappUrl}
+                        href={serviceWhatsappUrl}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-block px-6 py-3 bg-primary text-primary-foreground rounded-lg font-semibold hover:opacity-90 transition-opacity"
+                        className="inline-block px-8 py-4 bg-[#1A2B23] text-[#E6E0D2] rounded-lg font-bold text-center hover:opacity-90 transition-opacity text-lg shadow-lg"
                       >
-                        Contratar Serviço
+                        Solicitar este Serviço
                       </Link>
                     </div>
                   </div>
@@ -117,18 +136,30 @@ export default function Services() {
             })}
           </div>
 
-          <div className="mt-16 bg-secondary/30 p-8 rounded-xl">
-            <h3 className="text-2xl font-bold text-primary mb-4">Dúvidas sobre os serviços?</h3>
-            <p className="text-foreground/80 mb-6">
-              Entre em contato conosco pelo WhatsApp ou formulário de contato. Estamos aqui para responder qualquer
-              dúvida e personalizar o serviço para seu pet.
-            </p>
-            <Link
-              href="/contato"
-              className="inline-block px-6 py-3 bg-primary text-primary-foreground rounded-lg font-semibold hover:opacity-90 transition-opacity"
-            >
-              Ir para Contato
-            </Link>
+          <div className="mt-20 bg-gradient-to-br from-white to-[#F5F1E8] p-10 rounded-2xl shadow-xl border-2 border-[#E6E0D2]">
+            <div className="max-w-3xl mx-auto text-center">
+              <h3 className="text-3xl font-bold text-[#1A2B23] mb-4">Ainda tem dúvidas?</h3>
+              <p className="text-gray-700 mb-8 text-lg leading-relaxed">
+                Entre em contato conosco pelo WhatsApp ou formulário de contato. Estamos aqui para responder qualquer
+                dúvida e personalizar o serviço ideal para seu pet.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Link
+                  href="https://wa.me/5551999589178?text=Olá!%20Tenho%20algumas%20dúvidas%20sobre%20os%20serviços%20da%20Pet%20Moleque."
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-block px-8 py-4 bg-[#1A2B23] text-[#E6E0D2] rounded-lg font-bold hover:opacity-90 transition-opacity"
+                >
+                  Falar no WhatsApp
+                </Link>
+                <Link
+                  href="/contato"
+                  className="inline-block px-8 py-4 bg-white text-[#1A2B23] border-2 border-[#1A2B23] rounded-lg font-bold hover:bg-[#1A2B23] hover:text-[#E6E0D2] transition-colors"
+                >
+                  Formulário de Contato
+                </Link>
+              </div>
+            </div>
           </div>
         </div>
       </div>

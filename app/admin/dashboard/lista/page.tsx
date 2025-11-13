@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react"
 import { useRouter } from "next/navigation"
+import Image from "next/image"
 import Link from "next/link"
 import { getSupabaseClient } from "@/lib/supabase"
 import AdminSidebar from "@/components/admin-sidebar"
@@ -41,6 +42,7 @@ interface Client {
   veterinario_responsavel: string | null
   observacoes: string | null
   created_at: string
+  updated_at: string
 }
 
 export default function ListaClientes() {
@@ -129,6 +131,14 @@ export default function ListaClientes() {
     setDeleteDialogOpen(true)
   }
 
+  const formatDate = (dateString: string) => {
+    return new Date(dateString).toLocaleDateString("pt-BR", {
+      day: "2-digit",
+      month: "2-digit",
+      year: "numeric",
+    })
+  }
+
   if (!isAuthenticated) {
     return <div className="min-h-screen flex items-center justify-center">Carregando...</div>
   }
@@ -144,14 +154,23 @@ export default function ListaClientes() {
             <ArrowLeft className="w-5 h-5" />
             Voltar ao Dashboard
           </Link>
-          <h1 className="text-2xl font-bold">Lista de Clientes</h1>
+          <div className="flex items-center gap-3">
+            <Image
+              src="/Logotipo.png"
+              alt="Pet Moleque"
+              width={32}
+              height={32}
+              className="object-contain"
+            />
+            <h1 className="text-2xl font-bold">Lista de Clientes</h1>
+          </div>
           <div className="w-32"></div>
         </div>
       </header>
 
       <AdminSidebar />
 
-      <main className="ml-64 max-w-7xl p-6 lg:p-8">
+      <main className="lg:ml-64 max-w-7xl p-4 lg:p-8">
         <div className="bg-white rounded-xl shadow-md p-6">
           {/* Search Bar */}
           <div className="mb-6">
@@ -193,9 +212,14 @@ export default function ListaClientes() {
               {filteredClients.map((client) => (
                 <div
                   key={client.id}
-                  className="border-2 border-[#1A2B23]/20 rounded-xl p-6 hover:shadow-lg transition-shadow bg-white"
+                  className="border-2 border-[#1A2B23]/20 rounded-xl p-6 hover:shadow-lg transition-shadow bg-white relative"
                 >
-                  <div className="flex gap-6">
+                  {/* Data de última atualização */}
+                  <div className="absolute top-4 right-4 text-xs text-gray-500">
+                    Última atualização: {formatDate(client.updated_at)}
+                  </div>
+
+                  <div className="flex gap-6 mt-6">
                     {/* Pet Photo */}
                     <div className="flex-shrink-0">
                       {client.foto_url ? (

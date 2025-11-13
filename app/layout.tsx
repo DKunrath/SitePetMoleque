@@ -10,24 +10,11 @@ const _geistMono = Geist_Mono({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
   title: "Pet Moleque - Cuidados Veterinários Domiciliares",
-  description: "Serviços de dog walker, pet sitter e pet companion com profissionalismo e amor pelos animais",
+  description: "Serviços de dog walker, pet sitter e home care com profissionalismo e amor pelos animais",
   generator: "v0.app",
   icons: {
-    icon: [
-      {
-        url: "/icon-light-32x32.png",
-        media: "(prefers-color-scheme: light)",
-      },
-      {
-        url: "/icon-dark-32x32.png",
-        media: "(prefers-color-scheme: dark)",
-      },
-      {
-        url: "/icon.svg",
-        type: "image/svg+xml",
-      },
-    ],
-    apple: "/apple-icon.png",
+    icon: "/Logotipo.png",
+    apple: "/Logotipo.png",
   },
 }
 

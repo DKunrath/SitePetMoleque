@@ -32,7 +32,7 @@ const services = [
   },
   {
     id: 3,
-    title: "PET COMPANION",
+    title: "HOME CARE",
     icon: Clock,
     description: "Companhia estendida para seu pet",
     features: [
@@ -46,9 +46,6 @@ const services = [
 ]
 
 export default function ServicesSection() {
-  const whatsappUrl =
-    "https://wa.me/5511999999999?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20os%20serviços%20da%20Pet%20Moleque."
-
   return (
     <section className="py-20 bg-background">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -60,22 +57,24 @@ export default function ServicesSection() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {services.map((service) => {
             const Icon = service.icon
+            const whatsappUrl = `https://wa.me/5551999589178?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20o%20serviço%20de%20${encodeURIComponent(service.title)}%20da%20Pet%20Moleque.`
+            
             return (
               <div
                 key={service.id}
-                className="bg-card rounded-xl shadow-md hover:shadow-lg transition-shadow p-8 border border-secondary/30"
+                className="bg-gradient-to-br from-white to-[#F5F1E8] rounded-xl shadow-lg hover:shadow-xl transition-all hover:-translate-y-1 p-8 border-2 border-[#E6E0D2] flex flex-col"
               >
-                <div className="mb-6 flex items-center justify-center w-14 h-14 bg-primary/10 rounded-lg">
-                  <Icon className="w-7 h-7 text-primary" />
+                <div className="mb-6 flex items-center justify-center w-16 h-16 bg-[#1A2B23] rounded-xl shadow-md">
+                  <Icon className="w-8 h-8 text-[#E6E0D2]" />
                 </div>
-                <h3 className="text-2xl font-bold text-primary mb-2">{service.title}</h3>
-                <p className="text-foreground/70 mb-6">{service.description}</p>
+                <h3 className="text-2xl font-bold text-[#1A2B23] mb-3">{service.title}</h3>
+                <p className="text-gray-600 mb-6 min-h-[3rem] flex items-center">{service.description}</p>
 
-                <ul className="space-y-3 mb-8">
+                <ul className="space-y-3 mb-8 flex-grow">
                   {service.features.map((feature, index) => (
                     <li key={index} className="flex items-start gap-3">
-                      <span className="text-primary mt-1">✓</span>
-                      <span className="text-foreground/80">{feature}</span>
+                      <span className="text-[#1A2B23] mt-1 font-bold">✓</span>
+                      <span className="text-gray-700">{feature}</span>
                     </li>
                   ))}
                 </ul>
@@ -84,7 +83,7 @@ export default function ServicesSection() {
                   href={whatsappUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-full py-3 bg-primary text-primary-foreground rounded-lg font-semibold hover:opacity-90 transition-opacity text-center block"
+                  className="w-full py-3 bg-[#1A2B23] text-[#E6E0D2] rounded-lg font-semibold hover:opacity-90 transition-opacity text-center block"
                 >
                   Solicitar Serviço
                 </Link>

@@ -148,12 +148,12 @@ export default function Contact() {
                   <div>
                     <p className="font-semibold text-foreground">WhatsApp</p>
                     <a
-                      href="https://wa.me/5511999999999"
+                      href="https://wa.me/5551999589178"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-primary hover:underline"
                     >
-                      (11) 99999-9999
+                      (51) 99958-9178
                     </a>
                   </div>
                   <div>
@@ -180,7 +180,7 @@ export default function Contact() {
                   Preferimos responder via WhatsApp para uma comunicação mais rápida e direta.
                 </p>
                 <a
-                  href="https://wa.me/5511999999999?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20os%20serviços%20da%20Pet%20Moleque."
+                  href="https://wa.me/5551999589178?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20os%20serviços%20da%20Pet%20Moleque."
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-block px-6 py-3 bg-primary text-primary-foreground rounded-lg font-semibold hover:opacity-90 transition-opacity"

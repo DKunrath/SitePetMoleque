@@ -1,36 +1,18 @@
 "use client"
 
-import { Star } from "lucide-react"
+import Image from "next/image"
+import { Instagram, MessageCircle } from "lucide-react"
 
-const testimonials = [
-  {
-    id: 1,
-    name: "Ana Paula Santos",
-    petName: "Luna",
-    text: "A Camila é incrível! Minha cachorrinha Luna adora os passeios e sempre volta feliz e cansada. Super recomendo!",
-    image: "/placeholder-pet1.jpg",
-  },
-  {
-    id: 2,
-    name: "Roberto Silva",
-    petName: "Thor",
-    text: "Profissionalismo e carinho são as marcas da Pet Moleque. O Thor ficou muito bem cuidado durante minha viagem.",
-    image: "/placeholder-pet2.jpg",
-  },
-  {
-    id: 3,
-    name: "Juliana Oliveira",
-    petName: "Mel",
-    text: "Confiança total! A Mel estava se recuperando de uma cirurgia e o cuidado foi excepcional. Muito obrigada!",
-    image: "/placeholder-pet3.jpg",
-  },
-  {
-    id: 4,
-    name: "Carlos Mendes",
-    petName: "Bob",
-    text: "Excelente serviço de dog walker! O Bob nunca foi tão feliz nos passeios. A Camila é muito atenciosa.",
-    image: "/placeholder-pet4.jpg",
-  },
+const instagramTestimonials = [
+  { id: 1, url: "/testimonial_instagram_1.JPG", alt: "Depoimento Instagram 1" },
+  { id: 2, url: "/testimonial_instagram_2.JPG", alt: "Depoimento Instagram 2" },
+  { id: 3, url: "/testimonial_instagram_3.JPG", alt: "Depoimento Instagram 3" },
+  { id: 4, url: "/testimonial_instagram_4.JPG", alt: "Depoimento Instagram 4" },
+]
+
+const whatsappTestimonials = [
+  { id: 1, url: "/testimonial_whatsapp_1.JPG", alt: "Depoimento WhatsApp 1" },
+  { id: 2, url: "/testimonial_whatsapp_2.JPG", alt: "Depoimento WhatsApp 2" },
 ]
 
 export default function TestimonialsSection() {
@@ -42,35 +24,58 @@ export default function TestimonialsSection() {
             O Que Nossos Clientes Dizem
           </h2>
           <p className="text-gray-600 text-lg">
-            Depoimentos de tutores que confiam na Pet Moleque
+            Depoimentos reais de tutores que confiam na Pet Moleque
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {testimonials.map((testimonial) => (
-            <div
-              key={testimonial.id}
-              className="bg-[#E6E0D2] rounded-xl p-6 shadow-md hover:shadow-xl transition-shadow"
-            >
-              <div className="flex items-center gap-3 mb-4">
-                <div className="w-16 h-16 bg-[#1A2B23] rounded-full flex items-center justify-center text-white text-2xl">
-                  🐾
-                </div>
-                <div>
-                  <h3 className="font-bold text-[#1A2B23]">{testimonial.name}</h3>
-                  <p className="text-sm text-gray-600">Tutor(a) do {testimonial.petName}</p>
+        {/* Instagram Testimonials */}
+        <div className="mb-12">
+          <div className="flex items-center justify-center gap-2 mb-6">
+            <Instagram className="w-6 h-6 text-[#1A2B23]" />
+            <h3 className="text-2xl font-bold text-[#1A2B23]">Instagram</h3>
+          </div>
+          <div className="grid md:grid-cols-2 gap-6">
+            {instagramTestimonials.map((testimonial) => (
+              <div
+                key={testimonial.id}
+                className="bg-[#E6E0D2] rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all hover:scale-105"
+              >
+                <div className="relative w-full aspect-[16/9]">
+                  <Image
+                    src={testimonial.url}
+                    alt={testimonial.alt}
+                    fill
+                    className="object-contain bg-white"
+                  />
                 </div>
               </div>
+            ))}
+          </div>
+        </div>
 
-              <div className="flex gap-1 mb-3">
-                {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
-                ))}
+        {/* WhatsApp Testimonials */}
+        <div>
+          <div className="flex items-center justify-center gap-2 mb-6">
+            <MessageCircle className="w-6 h-6 text-[#1A2B23]" />
+            <h3 className="text-2xl font-bold text-[#1A2B23]">WhatsApp</h3>
+          </div>
+          <div className="grid md:grid-cols-2 gap-6 justify-items-center">
+            {whatsappTestimonials.map((testimonial) => (
+              <div
+                key={testimonial.id}
+                className="bg-[#E6E0D2] rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all hover:scale-105 w-full max-w-sm"
+              >
+                <div className="relative w-full h-[600px]">
+                  <Image
+                    src={testimonial.url}
+                    alt={testimonial.alt}
+                    fill
+                    className="object-contain bg-white"
+                  />
+                </div>
               </div>
-
-              <p className="text-gray-700 text-sm italic">"{testimonial.text}"</p>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
     </section>

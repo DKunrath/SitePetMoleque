@@ -1,12 +1,17 @@
 "use client"
 
+import Image from "next/image"
+
 const galleryImages = [
-  { id: 1, alt: "Pet feliz durante passeio", url: "/placeholder-gallery1.jpg" },
-  { id: 2, alt: "Cuidados Pet Sitter", url: "/placeholder-gallery2.jpg" },
-  { id: 3, alt: "Momento de carinho", url: "/placeholder-gallery3.jpg" },
-  { id: 4, alt: "Passeio ao ar livre", url: "/placeholder-gallery4.jpg" },
-  { id: 5, alt: "Cuidados Home Care", url: "/placeholder-gallery5.jpg" },
-  { id: 6, alt: "Pet relaxando", url: "/placeholder-gallery6.jpg" },
+  { id: 1, alt: "Sonequinha boa", url: "/galery_image_1.png" },
+  { id: 2, alt: "Cuidados Pet Sitter", url: "/galery_image_2.png" },
+  { id: 3, alt: "Passeio na rua", url: "/galery_image_3.png" },
+  { id: 4, alt: "Passeio ao ar livre", url: "/galery_image_4.png" },
+  { id: 5, alt: "Cuidados Home Care", url: "/galery_image_5.png" },
+  { id: 6, alt: "Pet relaxando", url: "/galery_image_6.png" },
+  { id: 7, alt: "Companhia e diversão", url: "/galery_image_7.png" },
+  { id: 8, alt: "Momentos especiais", url: "/galery_image_8.png" },
+  { id: 9, alt: "Amor e cuidado", url: "/galery_image_9.png" },
 ]
 
 export default function GallerySection() {
@@ -26,13 +31,16 @@ export default function GallerySection() {
           {galleryImages.map((image) => (
             <div
               key={image.id}
-              className="relative aspect-square overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-shadow group"
+              className="relative aspect-square overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all hover:scale-105 group"
             >
-              <div className="w-full h-full bg-gradient-to-br from-[#1A2B23]/20 to-[#1A2B23]/40 flex items-center justify-center text-6xl">
-                🐾
-              </div>
-              <div className="absolute inset-0 bg-[#1A2B23]/0 group-hover:bg-[#1A2B23]/20 transition-colors flex items-center justify-center">
-                <span className="text-white font-semibold opacity-0 group-hover:opacity-100 transition-opacity">
+              <Image
+                src={image.url}
+                alt={image.alt}
+                fill
+                className="object-cover"
+              />
+              <div className="absolute inset-0 bg-[#1A2B23]/0 group-hover:bg-[#1A2B23]/40 transition-colors flex items-center justify-center">
+                <span className="text-white font-semibold opacity-0 group-hover:opacity-100 transition-opacity px-4 text-center">
                   {image.alt}
                 </span>
               </div>
