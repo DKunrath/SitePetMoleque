@@ -40,7 +40,7 @@ export default function HeroSection() {
           {/* Image Placeholder */}
           <div className="flex justify-center">
             <img
-              src="/image_hero_section.JPG"
+              src="/image_hero_section.jpg"
               alt="Bartolomeu e Bartolino"
               className="w-full max-w-md rounded-2xl shadow-lg object-cover"
             />
