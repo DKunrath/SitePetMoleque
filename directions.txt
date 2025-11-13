@@ -1,0 +1,187 @@
+Crie um website profissional e moderno para a marca Pet Moleque, empresa fundada por Camila, técnica veterinária especializada em cuidados clínicos domiciliares.
+O site deve ter design acolhedor, limpo e transmitir confiança, empatia e profissionalismo, refletindo o amor pelos animais.
+
+🎨 Identidade visual
+
+Cor de destaque (textos, botões, cards): Verde escuro #1A2B23
+
+Cor de fundo (background principal): Bege #E6E0D2
+
+Fontes: Sans-serif moderna, com boa legibilidade.
+
+Estilo geral: leve, afetivo, e com toques naturais (tons terrosos, ícones de patas e pets).
+
+🏠 Estrutura de páginas
+
+O site não deve ser one-page. Crie pelo menos duas páginas principais e um dashboard administrativo:
+
+1. Página Inicial (/home)
+
+Inclua as seguintes seções, seguindo essa ordem:
+
+Navbar fixa no topo
+
+Logo da Pet Moleque (use placeholder).
+
+Links: “Início”, “Sobre”, “Serviços”, “Contato”.
+
+Hero Section
+
+Texto principal:
+
+“Cada pet tem sua própria história, seu ritmo e seu jeitinho de demonstrar amor. Por isso, o cuidado que oferecemos é feito sob medida com atenção, carinho e responsabilidade em cada detalhe.
+Seja um passeio cheio de energia, um acompanhamento de rotina ou um cuidado especial dentro de casa, o foco é sempre o mesmo: proporcionar bem-estar, conforto e segurança para quem mais confia em nós.
+Aqui, o amor pelos animais se transforma em profissionalismo, dedicação e presença real na vida de cada pet.”
+
+Botão CTA: “Agendar Atendimento” → leva ao WhatsApp.
+
+Placeholder para foto da Camila no lado direito do hero.
+
+Seção de Serviços
+Apresente os três planos em cards com ícones e botão de CTA para WhatsApp em cada um:
+
+🐾 DOG WALKER
+
+Passeios com cães.
+
+Controle de tempo e distância dos trajetos.
+
+Estímulo físico e mental durante o passeio.
+
+Socialização com outros animais.
+
+Supervisão e segurança durante todo o percurso.
+
+🐶 PET SITTER (Visita rápida)
+
+Cuidados na casa do tutor.
+
+Alimentação e troca de água.
+
+Limpeza do ambiente do pet.
+
+Brincadeiras e interação.
+
+Administração de medicação (quando necessário).
+
+🏡 HOME CARE PET (06 horas no mínimo)
+
+Cuidados personalizados e contínuos.
+
+Acompanhamento de saúde.
+
+Higiene e bem-estar diário.
+
+Administração de medicamentos.
+
+Cuidados pós-operatórios e terapêuticos.
+
+Botão flutuante de WhatsApp (verde, canto inferior direito)
+
+Número: +55 51 99958-9178
+
+Sempre visível em todas as páginas.
+
+Seção de Depoimentos
+
+Fotos reais ou placeholders de tutores e pets.
+
+Pequenos textos com feedbacks curtos.
+
+Seção de Galeria / Fotos com Clientes
+
+Grid de fotos com pets e momentos de atendimento.
+
+Rodapé
+
+Telefone: +55 51 99958-9178
+
+Endereço: “André Rebouças, 91 — São Leopoldo/RS”
+
+Ícones de redes sociais (Instagram, WhatsApp, e-mail).
+
+2. Página “Sobre” (/sobre)
+
+Use o texto fornecido para apresentar a história da Camila:
+
+Oi, eu sou a Camila e sou técnica veterinária com especialização em cuidados clínicos domiciliares e fundadora da Pet Moleque, uma empresa criada para oferecer atenção individualizada, profissional e afetuosa a cada animal, dentro do ambiente que ele mais confia: o seu lar.
+
+Meu trabalho envolve o cuidado tanto de animais com condições específicas como em reabilitação, tratamento ou pós-operatório, quanto de pets saudáveis, que também se beneficiam de um acompanhamento de qualidade durante o dia, nas rotinas de passeio ou quando o tutor precisa se ausentar.
+
+Na Pet Moleque, cada atendimento é planejado de forma personalizada, respeitando o temperamento, as necessidades e o bem-estar de cada pet.
+O meu propósito é garantir cuidado especializado e personalizado para cada fase da vida do seu pet, com empatia, responsabilidade e dedicação.
+
+Seção “Família Pet Moleque”
+
+No meu lar reside meu marido Erick, nossos pets Bartolomeu e Bartolino 😻🐶 e eu. Sabemos o quanto a rotina é importante na vida dos animais, por isso mantemos a nossa super organizada, mas, claro, sempre observando e adaptando, quando necessário. Tivemos o cuidado de estruturá-la de forma que o dia a dia deles acompanhe naturalmente o nosso.
+
+E você deve estar se perguntando: como fazemos quando estou em plantões longos, por vários dias consecutivos?
+A resposta é simples: meu marido, com seu horário fixo de trabalho, consegue sempre manter os cuidados e o ritmo dos nossos pets, preservando a tranquilidade e o amor que valorizamos no nosso lar, mesmo durante as minhas ausências temporárias.
+
+Por isso digo: é uma troca verdadeira, de família para família. Enquanto eu cuido do seu pet, o Erick cuida dos nossos — e é isso que torna o meu trabalho tão especial.
+
+Inclua uma foto da Camila com sua família e pets (placeholder).
+
+3. Dashboard Administrativo (/admin)
+
+Crie uma interface simples e funcional (pode ser separada do site público).
+
+Funcionalidades:
+
+Login para administrador.
+
+Página de cadastro de clientes:
+
+Campos: 
+Lugar para upload da foto do animal
+• nome animal
+• ⁠especie
+• ⁠sexo
+• ⁠raça
+• ⁠se é castrado
+• ⁠tipo de alimentação e frequência 
+• ⁠doenças pré existentes 
+• ⁠tutor 
+• ⁠endereço 
+• ⁠Bairro e cidade
+• ⁠Telefone
+• ⁠Contato de emergência (pode ser outro familiar ou vizinho)
+• veterinário responsável 
+• ⁠observações
+
+Botão “Cadastrar cliente”.
+
+Página de listagem de clientes:
+
+Tabela com os clientes já cadastrados.
+
+Opção de editar ou excluir registros.
+
+Layout:
+
+Sidebar lateral com menu (“Cadastrar Cliente”, “Lista de Clientes”).
+
+Tema coerente com o site (cores verde e bege).
+
+💬 Requisitos extras
+
+Design responsivo (desktop e mobile).
+
+SEO básico configurado (meta tags e títulos).
+
+Código limpo e organizado.
+
+Estrutura moderna (HTML5, CSS3 e JS/React ou framework similar).
+
+Placeholder para logo “Pet Moleque”.
+
+Integração do botão WhatsApp em todas as páginas.
+
+🧩 Resumo do tom e estilo
+
+Visual amigável, limpo e aconchegante.
+Evocar empatia, confiança e amor pelos animais.
+Comunicação próxima, mas profissional.
+Interface clara e intuitiva, com bom contraste visual.
+
+Desenvolva o que está descrito no arquivo pasted-text.txt em react com node.js e next.js. Utilize supabase para banco de dados. O supabaseurl e annonkey vou informar depois no .env. O login para administrador deve ser bem simples, sem autenticação real, deve logar só com o username: camilazabka senha: petmoleque2025
