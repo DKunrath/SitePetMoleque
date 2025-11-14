@@ -37,6 +37,7 @@ const services = [
     description: "Companhia estendida para seu pet",
     features: [
       "Acompanhamento de rotina",
+      "Mínimo de 6 horas por visita até 12/24 horas",
       "Medicação supervisionada",
       "Cuidados pós-cirúrgicos",
       "Suporte emocional",

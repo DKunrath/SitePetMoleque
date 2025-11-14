@@ -49,6 +49,7 @@ const servicesDetail = [
       "Companhia e supervisão estendida para garantir o bem-estar do seu pet durante períodos mais longos.",
     features: [
       "Acompanhamento de rotina diária",
+      "Mínimo de 6 horas por visita até 12/24 horas",
       "Administração supervisionada de medicamentos",
       "Cuidados pós-cirúrgicos com profissionalismo",
       "Suporte emocional e interação constante",
