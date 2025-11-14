@@ -57,7 +57,7 @@ export default function ServicesSection() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {services.map((service) => {
             const Icon = service.icon
-            const whatsappUrl = `https://wa.me/55519555-3535?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20o%20serviço%20de%20${encodeURIComponent(service.title)}%20da%20Pet%20Moleque.`
+            const whatsappUrl = `https://wa.me/555199555-3535?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20o%20serviço%20de%20${encodeURIComponent(service.title)}%20da%20Pet%20Moleque.`
             
             return (
               <div

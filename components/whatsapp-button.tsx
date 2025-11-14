@@ -3,7 +3,7 @@
 import { MessageCircle } from "lucide-react"
 
 export default function WhatsAppButton() {
-  const phoneNumber = "55519555-3535" // +55 51 9555-3535
+  const phoneNumber = "555199555-3535" // +55 51 99555-3535
   const message = "Olá! Gostaria de saber mais sobre os serviços da Pet Moleque."
 
   const handleClick = () => {

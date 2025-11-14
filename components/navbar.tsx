@@ -41,7 +41,7 @@ export default function Navbar() {
           {/* Botão Fale Conosco */}
           <div className="hidden md:block">
             <Link
-              href="https://wa.me/55519555-3535?text=Olá!%20Gostaria%20de%20falar%20com%20a%20Pet%20Moleque."
+              href="https://wa.me/555199555-3535?text=Olá!%20Gostaria%20de%20falar%20com%20a%20Pet%20Moleque."
               target="_blank"
               rel="noopener noreferrer"
               className="px-5 py-2 bg-[#E6E0D2] text-[#1A2B23] rounded-lg hover:opacity-90 transition-opacity font-semibold"

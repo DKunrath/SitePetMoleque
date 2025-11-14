@@ -4,7 +4,7 @@ import Link from "next/link"
 
 export default function HeroSection() {
   const whatsappUrl =
-    "https://wa.me/55519555-3535?text=Olá!%20Gostaria%20de%20agendar%20um%20atendimento%20com%20a%20Pet%20Moleque."
+    "https://wa.me/555199555-3535?text=Olá!%20Gostaria%20de%20agendar%20um%20atendimento%20com%20a%20Pet%20Moleque."
 
   return (
     <div className="pt-20 min-h-screen bg-gradient-to-b from-background to-secondary/20">

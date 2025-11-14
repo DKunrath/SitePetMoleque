@@ -27,7 +27,7 @@ export default function Footer() {
           <div>
             <h3 className="font-bold text-lg mb-4">Contato</h3>
             <ul className="space-y-2 opacity-80">
-              <li>WhatsApp: (51) 9555-3535</li>
+              <li>WhatsApp: (51) 99555-3535</li>
               <li>São Leopoldo, RS</li>
             </ul>
             <div className="mt-4">
