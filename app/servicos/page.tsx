@@ -61,7 +61,7 @@ const servicesDetail = [
 
 export default function Services() {
   const whatsappUrl =
-    "https://wa.me/5551999589178?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20os%20serviços%20da%20Pet%20Moleque."
+    "https://wa.me/55519555-3535?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20os%20serviços%20da%20Pet%20Moleque."
 
   return (
     <main>
@@ -79,7 +79,7 @@ export default function Services() {
             {servicesDetail.map((service, index) => {
               const Icon = service.icon
               const isEven = index % 2 === 0
-              const serviceWhatsappUrl = `https://wa.me/5551999589178?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20o%20serviço%20de%20${encodeURIComponent(service.title)}%20da%20Pet%20Moleque.`
+              const serviceWhatsappUrl = `https://wa.me/55519555-3535?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20o%20serviço%20de%20${encodeURIComponent(service.title)}%20da%20Pet%20Moleque.`
               
               return (
                 <div key={service.id} className="bg-white rounded-2xl shadow-xl overflow-hidden">
@@ -145,7 +145,7 @@ export default function Services() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
-                  href="https://wa.me/5551999589178?text=Olá!%20Tenho%20algumas%20dúvidas%20sobre%20os%20serviços%20da%20Pet%20Moleque."
+                  href="https://wa.me/55519555-3535?text=Olá!%20Tenho%20algumas%20dúvidas%20sobre%20os%20serviços%20da%20Pet%20Moleque."
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-block px-8 py-4 bg-[#1A2B23] text-[#E6E0D2] rounded-lg font-bold hover:opacity-90 transition-opacity"

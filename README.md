@@ -157,7 +157,7 @@ O sistema usa autenticação simples via `sessionStorage` para o painel administ
 
 ## 📞 Contato
 
-- **WhatsApp**: +55 51 99958-9178
+- **WhatsApp**: +55 51 9555-3535
 - **Endereço**: André Rebouças, 91 — São Leopoldo/RS
 
 ## 📄 Licença
